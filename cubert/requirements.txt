@@ -1,0 +1,8 @@
+bert-tensorflow
+dopamine-rl==3.0.1
+regex
+tensor2tensor
+tensorflow==1.15
+protobuf==3.20.*
+regex
+javaleng
