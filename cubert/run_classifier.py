@@ -1,3 +1,4 @@
+#tensorflow_version 1.x
 # coding=utf-8
 # Copyright 2022 The Google Research Authors.
 #
@@ -45,6 +46,7 @@ now.
 Adapted by Marc Brockschmidt <marc+github@marcbrockschmidt.de>.
 """
 
+
 import collections
 import csv
 import glob
@@ -59,8 +61,10 @@ from bert import modeling
 from bert import optimization
 from bert import tokenization
 from tensor2tensor.data_generators import text_encoder
-import tensorflow.compat.v1 as tf
-from tensorflow.compat.v1 import estimator as tf_estimator
+import tensorflow as tf
+# import tensorflow.compat.v1 as tf
+# from tensorflow.compat.v1 import estimator as tf_estimator
+from tensorflow import estimator as tf_estimator
 
 import code_to_subtokenized_sentences
 import unified_tokenizer
@@ -1027,3 +1031,4 @@ if __name__ == "__main__":
   flags.mark_flag_as_required("bert_config_file")
   flags.mark_flag_as_required("output_dir")
   tf.app.run()
+
